@@ -1,0 +1,19 @@
+n = int(raw_input())
+phonebook = {}
+
+for i in range(n):
+    name, id = raw_input().split()
+    phonebook[name] = id
+
+while(1):
+    try:
+        name = raw_input()
+    
+        if(phonebook.has_key(name)):
+            print(name + "=" + phonebook[name])
+
+        else:
+            print("Not found")
+        
+    except EOFError as error:
+        break
